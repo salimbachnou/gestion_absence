@@ -15,4 +15,10 @@ class Module extends Model
     {
         return $this->hasMany(Seance::class);
     }
+
+    // Relation : Un module appartient à une filière
+    public function filiere()
+    {
+        return $this->belongsTo(Filiere::class);
+    }
 }

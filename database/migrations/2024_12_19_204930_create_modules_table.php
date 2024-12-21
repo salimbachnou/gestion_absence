@@ -17,7 +17,10 @@ return new class extends Migration
             $table->date('date_creation');
             $table->date('date_fin');
             $table->text('description');
+            $table->text('nbr_heures');
+            $table->foreignId('id_filiere')->constrained('filieres')->onDelete('cascade');
             $table->timestamps();
+            
         });
         
         

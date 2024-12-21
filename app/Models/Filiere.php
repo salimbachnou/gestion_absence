@@ -16,4 +16,11 @@ class Filiere extends Model
     {
         return $this->hasMany(Niveau::class);
     }
+
+    // Relation : Une filière a plusieurs modules
+    public function modules()
+    {
+        return $this->hasMany(Module::class);
+    }
+    
 }

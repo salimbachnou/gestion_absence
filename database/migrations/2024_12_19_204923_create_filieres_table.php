@@ -14,8 +14,11 @@ return new class extends Migration
         Schema::create('filieres', function (Blueprint $table) {
             $table->id();
             $table->string('nom_filiere');
+            $table->string('nom_fondateur');
             $table->integer('annee_etude');
             $table->date('date_creation');
+            $table->text('description');
+            $table->date('date_fin');
             $table->timestamps();
         });
         
